@@ -1,0 +1,25 @@
+{
+  "Author": "Shane Tomlinson <shane@shanetomlinson.com> (https://shanetomlinson.com)",
+  "name": "commodore",
+  "description": "Extend commander with required options and load config from a file",
+  "keywords": ["command", "option", "commander", "config"],
+  "homepage": "https://github.com/shane-tomlinson/commodore",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shane-tomlinson/commodore.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shane-tomlinson/commodore/issues"
+  },
+  "version": "0.0.1",
+  "engines": {
+    "node": ">= 0.6.x"
+  },
+  "main": "lib/start",
+  "dependencies": {
+    "commander": "1.1.1"
+  },
+  "devDependencies": { 
+    "should": ">= 0.0.1"
+  }
+}
