@@ -8,8 +8,8 @@ const program = require('../lib/start'),
 program
     .version('0.0.1')
     .option('-f, --foo <foo_type>', 'add some <foo_type>')
-    .require('foo');
+    .demand('foo');
 
 var helpInfo = program.helpInformation();
-helpInfo.should.include("[required]");
+helpInfo.should.include("[required] add some <foo_type>");
 

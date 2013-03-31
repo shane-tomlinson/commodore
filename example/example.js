@@ -18,11 +18,11 @@ function getUserHome() {
 program
     .version('0.0.1')
     .option('-t, --type <type>', 'add support for <type>')
-    .require('type')
+    .demand('type')
     .option('-p, --pie <pie>', 'specify a <pie>')
-    .require('pie')
-    .option('-a', 'an option')
-    .require('a')
+    .demand('pie')
+    .option('-a, --an', 'an option')
+    .demand('a')
     .load(CONFIG_PATH)
     .parse(process.argv);
 

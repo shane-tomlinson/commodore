@@ -8,10 +8,14 @@ const program = require('../lib/start'),
 
 program
     .version('0.0.1')
-    .option('-b, --bar <bar_type>', 'add some <bar_type>')
-    .require('bar')
+    .option('-b, --foo <foo_type>', 'add some <foo_type>')
+    .loadable('--foo')
+    .option('-z, --baz <baz_type>', 'add some <baz_type>')
     .load(path.join(__dirname, "config", "test-config.json"))
     .parse(['node', 'test']);
 
-program.bar.should.be.equal("baz");;
+program.foo.should.be.equal("bar");
+
+// option is defined in config but not marked as loadable. Will not be loaded.
+should.strictEqual(undefined, program.baz);
 
