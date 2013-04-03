@@ -1,7 +1,7 @@
 {
   "Author": "Shane Tomlinson <shane@shanetomlinson.com> (https://shanetomlinson.com)",
   "name": "commodore",
-  "description": "Extend commander with required options and load config from a file",
+  "description": "A complete command line library - extends commander with required options and load config from a file",
   "keywords": ["command", "option", "commander", "config"],
   "homepage": "https://github.com/shane-tomlinson/commodore",
   "repository": {
