@@ -37,6 +37,23 @@ program
   .oneof('foo', ['bar', 'baz', 'buz'])
 ```
 
+## .comboof(optionName, choices)
+  Demand that the value of `optionName` be one or more combinations of `choices`
+
+```js
+program
+  .option('-f, --foo <foo_type>', 'type of foo')
+  .comboof('foo', ['bar', 'baz', 'buz'])
+```
+
+Combinations are joined with `+`, distinct options are joined with a `,`
+Possible matches:
+* `bar`
+* `buz`
+* `bar+baz`
+* `bar+baz+buz`
+* `bar+baz,buz`
+
 ## .load(configPath)
   Load `loadable` options from a configuration file.
 
@@ -49,7 +66,7 @@ program
 
 ## Why the fork/extension?
 
-I love commander, I also love [optimist](https://github.com/substack/node-optimist). 
+I love commander, I also love [optimist](https://github.com/substack/node-optimist).
 Both are missing features. TJ does not want to add complexity to the commander library,
 so I created a library on top of his to fulfill my own needs.
 
